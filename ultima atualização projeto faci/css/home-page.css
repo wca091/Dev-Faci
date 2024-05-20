@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* ESTILO GERAL---------------------------------------------*/
+body{
+    overflow-x: hidden;
+}
+section{
+    padding: 250px 0;
+}
+h3{
+    font-size: 30px;
+}
+p{
+    color: #0000009c;
+    font-size: 12.5px;
+}
+.container{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */  
+}
+/* FIM GERAL---------------------------------------------*/
+
+
+
+
+/* inicio Header ---------------------------------------------*/
+
+nav{
+    position:fixed ;
+    right: 5rem;
+    top: 3rem;
+
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul a{
+    color: rgb(0, 0, 0);
+    margin: 0 25px;
+    text-transform:uppercase;
+    font-size: 14px;
+    display: block;
+}
+nav ul a:hover::after{
+    width: 100%;
+}
+.menu {
+    display: none;
+    cursor: pointer;
+    display: block;
+}
+.menu div {
+    width: 30px;
+    height: 5px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+      position: absolute;
+      top: 12vh;
+      right: 0;
+      width: 10vw;
+      height: 92vh;
+      flex-direction: column;
+      align-items: end;
+      gap: 20px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+}
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+      opacity: 0;
+      background-color: whitesmoke;
+      padding: 10px;
+      border-radius: 50px;
+      box-shadow: 5px 5px 10px black;
+}
+.nav-list.active {
+    transform: translateX(0);
+}
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+.menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.active .line2 {
+    opacity: 0;
+}
+.active .line3 {
+    transform: rotate(45deg) translate(-10px, -9px);
+}
+
+header{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.banner-text{
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    padding: 40vh;  
+}
+h1{
+    font-size: 7em;
+    color: white;
+    font-family:"Righteous", sans-serif;
+}
+.p-subtitulo{
+    font-size: 1.5em;
+    color: white;
+    font-weight: lighter;
+    margin: 18px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* fim Header ---------------------------------------------*/
+
+
+
+
+/* INICIO BOTÃO MONSTRUÁRIO COMPLETO---------------------------------------------*/
+.btn{
+    background-color: #121212;
+    color: rgb(255, 255, 255);
+    padding: 1.67vh 2.22vh;
+    border-radius: 1vh;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+}
+.btn.animate-btn{
+    animation: animate-outline 1s ease-out infinite;
+}
+.btn:hover{
+    background-color: #ffffffbe;
+}
+@keyframes animate-outline {
+    from{
+        outline: 0px solid #ffffff8a;
+    }
+
+    to{ 
+        outline: 1.67vh solid #4f9bf900;
+    }
+}
+/* FIM BOTÃO MONSTRUÁRIO COMPLETO---------------------------------------------*/
+
+
+
+/* ESTILO APRESENTAÇÃO" */
+.section-apresentacao{
+    background-color: #E6E8E6;
+    border-radius: 1.11vh;
+    display: flex;
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    height: 50vh; /* Ajuste a altura conforme necessário */
+    /* Adicione outras propriedades de estilização conforme necessário */
+
+}
+.div-apresentacao{
+    text-align: center;
+}
+.h3-apresentacao{
+    height: 80px;
+    font-family:"Righteous", sans-serif;
+}
+.p-apresentacao{
+    width: 1150px;  
+    line-height: 1.5; 
+}
+/* FIM ESTILO APRESENTAÇÃO ---------------------------------------------*/
+
+
+
+/* CONTEUDO CARABO E JAFARABADI---------------------------------------------*/
+.img-carabao{
+    margin-left: 150px;
+    border-radius: 50px;
+    height: auto;
+    width: 50vh;
+    min-width: 20vh;
+}
+.section-carabao{
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos horizontalmente */
+    text-align: justify;
+    background-image: url(../img/carabao-desfoque.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.div-carabao{
+    margin-top: -50px;
+}
+.h3-carabao{
+    margin-top: 70px;
+    height: 70px;
+    margin-left: 150px;
+    color: white;
+    font-family:"Righteous", sans-serif;
+}
+.p-carabao{
+    height: 250px;
+    margin-right: 200px;
+    margin-left: 150px;
+    max-width: 1900px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+/* FIM CONTEUDO CARABAO ---------------------------------------------*/
+
+
+/* CONTEUDO MURRAH ---------------------------------------------*/
+.img-murrah{
+    margin-left: 250px;
+    margin-right: 150px;
+    border-radius: 50px;
+}
+.section-murrah{
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos horizontalmente */
+    text-align: justify;
+    background-image: url(../img/murrah-desfoque.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 10px;   
+}
+
+.h3-murrah{
+    margin-left: 150px;
+    height: 70px;
+    color: #E6E8E6;
+    font-family:"Righteous", sans-serif;
+}
+.p-murrah{
+    margin-left: 150px;
+    max-width: 500px;
+    color: #E6E8E6;
+    line-height: 1.5;
+}
+
+
+/* FIM CONTEUDO MURRAH ---------------------------------------------*/
+
+
+
+/* CONTEUDO JAFARABADI ---------------------------------------------*/
+
+.img-jafarabadi{
+    margin-left: 150px;
+    border-radius: 50px;
+}
+.section-jafarabadi{
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos horizontalmente */
+    text-align: justify;
+    background-image: url(../img/jafarabadi-desfoque.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.div-jafarabadi{
+    margin-top: -50px;
+}
+.h3-jafarabadi{
+    margin-top: 70px;
+    height: 70px;
+    margin-left: 150px;
+    color: white;
+    font-family:"Righteous", sans-serif;
+}
+.p-jafarabadi{
+    height: 250px;
+    margin-right: 200px;
+    margin-left: 150px;
+    max-width: 1900px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+/* FIM CONTEUDO JUFARABADI ---------------------------------------------*/
+
+/* CONTEUDO MEDITERRANEO ---------------------------------------------*/
+.img-mediterraneo{
+    margin-left: 250px;
+    margin-right: 150px;
+    border-radius: 50px;
+}
+.section-mediterraneo{
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos horizontalmente */
+    text-align: justify;
+    background-image: url(../img/mediterraneo-desfoque.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 10px;   
+}
+.div.mediterraneo{
+    max-width: 1900px;
+    margin: 0 ;
+    padding: 0 ;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+}
+.h3-mediterraneo{
+    margin-left: 150px;
+    height: 70px;
+    color: #E6E8E6;
+    font-family:"Righteous", sans-serif;
+}
+.p-mediterraneo{
+    margin-left: 150px;
+    max-width: 500px;
+    color: #E6E8E6;
+    line-height: 1.5;
+}
+
+/* FIM CONTEUDO MEDITERRANEO ---------------------------------------------*/
+
+/* INICIO RODAPÉ ---------------------------------------------*/
+
+footer {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    height: 300px;
+}
+
+.links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    
+}
+.voltar, .c, .mu, .j, .me, .sobre{
+    margin-top: 2em;
+}
+
+.links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+    margin: 20px 20px;
+}
+
+.p-footer {
+    padding-top: 40px;
+    max-width: auto;
+    margin-left: 30em;
+    margin-right: 30em;
+    font-size: 15px;
+}
+
+.social-icons {
+    padding-top: 50px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #121212;
+}
+
+.copyright {
+    margin-top: 3em;
+    padding-top: 1em;
+    background-color: #797979;
+    height: 40px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.p-copyright{
+    color: white;
+}
+
+/* Regras de mídia para tornar o footer responsivo */
+@media only screen and (max-width: 768px) {
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .links a {
+        margin: 10px;
+    }
+}
+/* FIM RODAPÉ ---------------------------------------------*/
+
